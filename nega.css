@@ -1,0 +1,115 @@
+/* RESET */
+* {
+    margin: 0;
+        padding: 0;
+            box-sizing: border-box;
+                font-family: 'Segoe UI', sans-serif;
+                }
+
+                /* BODY - fundo romântico */
+                body {
+                    height: 100vh;
+                        display: flex;
+                            flex-direction: column;
+                                align-items: center;
+                                    justify-content: flex-start;
+                                        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+                                            overflow: hidden;
+                                                padding: 20px;
+                                                }
+
+                                                /* CABEÇALHO */
+                                                .header h1 {
+                                                    text-align: center;
+                                                        color: white;
+                                                            font-size: 22px;
+                                                                margin-bottom: 20px;
+                                                                    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+                                                                    }
+
+                                                                    /* PUZZLE CONTAINER */
+                                                                    #puzzleContainer {
+                                                                        display: flex;
+                                                                            flex-wrap: wrap;
+                                                                                justify-content: center;
+                                                                                    gap: 15px;
+                                                                                        max-width: 600px;
+                                                                                            margin-bottom: 30px;
+                                                                                            }
+
+                                                                                            /* CORAÇÕES */
+                                                                                            .heart {
+                                                                                                width: 50px;
+                                                                                                    height: 50px;
+                                                                                                        background: red;
+                                                                                                            clip-path: polygon(
+                                                                                                                    50% 0%, 61% 13%, 75% 13%, 88% 25%, 88% 38%, 75% 50%,
+                                                                                                                            50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 13%, 39% 13%
+                                                                                                                                );
+                                                                                                                                    cursor: pointer;
+                                                                                                                                        transition: transform 0.3s, opacity 0.3s;
+                                                                                                                                            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                                                                                                                                            }
+
+                                                                                                                                            .heart:hover {
+                                                                                                                                                transform: scale(1.2);
+                                                                                                                                                }
+
+                                                                                                                                                /* MENSAGEM REVELADA */
+                                                                                                                                                #messageContainer {
+                                                                                                                                                    text-align: center;
+                                                                                                                                                        color: white;
+                                                                                                                                                            max-width: 600px;
+                                                                                                                                                                background: rgba(255,255,255,0.1);
+                                                                                                                                                                    padding: 20px;
+                                                                                                                                                                        border-radius: 25px;
+                                                                                                                                                                            backdrop-filter: blur(10px);
+                                                                                                                                                                                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                                                                                                                                                                                }
+
+                                                                                                                                                                                /* Texto da mensagem */
+                                                                                                                                                                                #revealedMessage {
+                                                                                                                                                                                    font-size: 20px;
+                                                                                                                                                                                        margin-bottom: 15px;
+                                                                                                                                                                                            line-height: 1.5;
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            /* CONTADOR DE TEMPO */
+                                                                                                                                                                                            #timeTogether {
+                                                                                                                                                                                                font-size: 18px;
+                                                                                                                                                                                                    margin: 10px 0;
+                                                                                                                                                                                                        color: #fff;
+                                                                                                                                                                                                            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                            /* BOTÃO DE AMOR */
+                                                                                                                                                                                                            #loveBtn {
+                                                                                                                                                                                                                padding: 12px 25px;
+                                                                                                                                                                                                                    border: none;
+                                                                                                                                                                                                                        border-radius: 25px;
+                                                                                                                                                                                                                            background: white;
+                                                                                                                                                                                                                                color: #ff4d6d;
+                                                                                                                                                                                                                                    font-weight: bold;
+                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                            transition: all 0.3s ease;
+                                                                                                                                                                                                                                                margin-top: 10px;
+                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                #loveBtn:hover {
+                                                                                                                                                                                                                                                    transform: scale(1.1);
+                                                                                                                                                                                                                                                        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                        /* MENSAGEM DE PORCENTAGEM */
+                                                                                                                                                                                                                                                        .hidden-message {
+                                                                                                                                                                                                                                                            margin-top: 15px;
+                                                                                                                                                                                                                                                                opacity: 0;
+                                                                                                                                                                                                                                                                    font-size: 18px;
+                                                                                                                                                                                                                                                                        transition: 1s;
+                                                                                                                                                                                                                                                                            color: white;
+                                                                                                                                                                                                                                                                                text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                .show {
+                                                                                                                                                                                                                                                                                    opacity: 1;
+                                                                                                                                                                                                                                                                                    }
