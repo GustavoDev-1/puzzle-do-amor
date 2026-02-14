@@ -12,7 +12,7 @@ hearts.forEach(heart => {
                                     heart.style.opacity = "0.2";
                                             heart.style.pointerEvents = "none";
 
-                                                    // Quando todos clicados, adiciona coração final
+                                                    // Quando todos os corações forem clicados, adiciona o coração final
                                                             if(wordsRevealed.length === hearts.length){
                                                                         revealedMessage.textContent += " 💖";
                                                                                 }
@@ -42,8 +42,8 @@ hearts.forEach(heart => {
                                                                                                                                                                     // ------------------ CONTADOR DE TEMPO -------------------
                                                                                                                                                                     const timeTogether = document.getElementById("timeTogether");
 
-                                                                                                                                                                    // DATA DE INÍCIO: 04/10/2025
-                                                                                                                                                                    const startDate = new Date(2025, 9, 4, 0, 0, 0); // Outubro = 9
+                                                                                                                                                                    // DATA DE INÍCIO: 04/10/2025 (mês = 9, pois JS começa do 0)
+                                                                                                                                                                    const startDate = new Date(2025, 9, 4, 0, 0, 0);
 
                                                                                                                                                                     function atualizarContador(){
                                                                                                                                                                         const now = new Date();
