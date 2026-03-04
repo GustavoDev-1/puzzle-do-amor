@@ -1,62 +1,83 @@
-// ------------------ PUZZLE -------------------
-const hearts = document.querySelectorAll(".heart");
-const revealedMessage = document.getElementById("revealedMessage");
+function irParaMomentos() {
+    window.location.href = "momentos.html";
+}
 
-let wordsRevealed = [];
+function irParaCarta() {
+    window.location.href = "carta.html";
+}
 
-hearts.forEach(heart => {
-    heart.addEventListener("click", function(){
-            const word = heart.getAttribute("data-word");
-                    wordsRevealed.push(word);
-                            revealedMessage.textContent = wordsRevealed.join(" ");
-                                    heart.style.opacity = "0.2";
-                                            heart.style.pointerEvents = "none";
+function voltarHome() {
+    window.location.href = "index.html";
+}
 
-                                                    // Quando todos os corações forem clicados, adiciona o coração final
-                                                            if(wordsRevealed.length === hearts.length){
-                                                                        revealedMessage.textContent += " 💖";
-                                                                                }
-                                                                                    });
-                                                                                    });
+function mostrarSurpresa() {
+    const surpresa = document.getElementById("surpresa");
 
-                                                                                    // ------------------ PORCENTAGEM DO AMOR -------------------
-                                                                                    const loveBtn = document.getElementById("loveBtn");
-                                                                                    const loveMessage = document.getElementById("loveMessage");
+    surpresa.innerHTML = `
+        <div class="versiculo-box">
+            <strong>Um versículo que representa o que eu sinto por você:</strong><br><br>
 
-                                                                                    loveBtn.addEventListener("click", function(){
-                                                                                        loveMessage.classList.add("show");
-                                                                                            let valores = ["0%", "10%", "50%", "100%", "1000%", "1000000%", "∞%"];
-                                                                                                let index = 0;
-                                                                                                    loveMessage.innerHTML = "Eu te amo " + valores[index] + " ❤️";
+            "As muitas águas não podem apagar o amor;
+            os rios não conseguem levá-lo na correnteza.
+            Se alguém oferecesse todas as riquezas da sua casa para adquirir o amor,
+            seria totalmente desprezado."
+            
+            <br><br>
+            ❤️ Cantares 8:7 ❤️
+            
+            <br><br>
+            <em>
+            É assim que eu quero te amar… 
+            Um amor que nada apaga,
+            nada destrói,
+            nada separa.
+            </em>
 
-                                                                                                        let intervalo = setInterval(()=>{
-                                                                                                                index++;
-                                                                                                                        if(index < valores.length){
-                                                                                                                                    loveMessage.innerHTML = "Eu te amo " + valores[index] + " ❤️";
-                                                                                                                                            } else {
-                                                                                                                                                        clearInterval(intervalo);
-                                                                                                                                                                }
-                                                                                                                                                                    }, 500);
-                                                                                                                                                                    });
+            <br><br>
 
-                                                                                                                                                                    // ------------------ CONTADOR DE TEMPO -------------------
-                                                                                                                                                                    const timeTogether = document.getElementById("timeTogether");
+          <h3 style="margin-top:15px;">
+    Entre todos os tesouros do mundo,
+    você é o meu verdadeiro One Piece. ❤️🏴‍☠️  Se amar você for minha maior aventura,
+    então eu quero navegar por essa vida inteira ao seu lado.
+    Porque meu verdadeiro tesouro sempre vai ser você. 💍
+</h3>
+        </div>
+    `;
 
-                                                                                                                                                                    // DATA DE INÍCIO: 04/10/2025 (mês = 9, pois JS começa do 0)
-                                                                                                                                                                    const startDate = new Date(2025, 9, 4, 0, 0, 0);
+    surpresa.classList.add("fade-in");
+}
 
-                                                                                                                                                                    function atualizarContador(){
-                                                                                                                                                                        const now = new Date();
-                                                                                                                                                                            let diff = now - startDate; // diferença em ms
+/* Corações subindo */
+function criarCoracao() {
+    const heart = document.createElement("span");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.querySelector(".hearts").appendChild(heart);
 
-                                                                                                                                                                                const segundos = Math.floor(diff / 1000) % 60;
-                                                                                                                                                                                    const minutos = Math.floor(diff / (1000 * 60)) % 60;
-                                                                                                                                                                                        const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
-                                                                                                                                                                                            const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
 
-                                                                                                                                                                                                timeTogether.textContent = `Estamos juntos há ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos ❤️`;
-                                                                                                                                                                                                }
+setInterval(criarCoracao, 300);
 
-                                                                                                                                                                                                // Atualiza a cada segundo
-                                                                                                                                                                                                setInterval(atualizarContador, 1000);
-                                                                                                                                                                                                atualizarContador(); // inicializa imediatamente
+/* Animação suave dos cards */
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("mostrar");
+        }, index * 400); // aparece um depois do outro
+    });
+});
+
+document.addEventListener("click", function iniciarMusica() {
+    const musica = document.getElementById("musica");
+    if (musica) {
+        musica.volume = 0.3; // volume suave
+        musica.play();
+    }
+    document.removeEventListener("click", iniciarMusica);
+});
