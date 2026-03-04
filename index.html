@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Puzzle do Amor 💖</title>
-<link rel="stylesheet" href="nega.css">
+    <meta charset="UTF-8">
+    <title>Feliz 5 Meses ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- TÍTULO -->
-<div class="header">
-    <h1>💖 Clique nos corações para descobrir minha mensagem 💖</h1>
+<audio id="musica" src="minhanamorada.mp3" loop controls></audio>
+    <div class="hearts"></div>
+
+    <div class="container">
+        <h1>Feliz 5 Meses, Meu Amor ❤️</h1>
+
+        <img src="20251017_113930.jpg" class="foto">
+
+        <p>
+            Hoje completamos 5 meses de uma história que mudou completamente a minha vida.
+            5 meses de carinho, risadas, aprendizados, abraços apertados e momentos
+            que eu vou guardar para sempre no meu coração.
+        </p>
+
+        <p>
+            Você se tornou meu lugar seguro, minha paz nos dias difíceis
+            e minha alegria nos dias bons.
+        </p>
+
+        <button onclick="irParaMomentos()">Nossos Momentos 💕</button>
+        <button onclick="irParaCarta()">Minha Carta 💌</button>
     </div>
 
-    <!-- CONTEÚDO DO PUZZLE -->
-    <div id="puzzleContainer">
-        <!-- Corações -->
-            <div class="heart" data-word="Você"></div>
-                <div class="heart" data-word="é"></div>
-                    <div class="heart" data-word="a definição"></div>
-                        <div class="heart" data-word="de beleza,"></div>
-                            <div class="heart" data-word="não apenas"></div>
-                                <div class="heart" data-word="por fora,"></div>
-                                    <div class="heart" data-word="mas principalmente"></div>
-                                        <div class="heart" data-word="por dentro."></div>
-                                            <div class="heart" data-word="Seu sorriso ilumina meus dias,"></div>
-                                                <div class="heart" data-word="sua voz acalma meu coração"></div>
-                                                    <div class="heart" data-word="e sua presença transforma tudo ao meu redor."></div>
-                                                    </div>
-
-                                                    <!-- MENSAGEM REVELADA -->
-                                                    <div id="messageContainer">
-                                                        <p id="revealedMessage"></p>
-                                                            <!-- CONTADOR DE TEMPO -->
-                                                                <p id="timeTogether"></p>
-
-                                                                    <button id="loveBtn">Clique para ver o quanto eu te amo ❤️</button>
-                                                                        <div id="loveMessage" class="hidden-message"></div>
-                                                                        </div>
-
-                                                                        <script src="preta.js"></script>
-                                                                        </body>
-                                                                        </html>
+<script src="script.js"></script>
+</body>
+</html>
