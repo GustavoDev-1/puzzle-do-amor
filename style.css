@@ -1,89 +1,137 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ff4d6d, #ff8fab);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    color: white;
-    overflow-x: hidden;
+body{
+
+margin:0;
+font-family:Poppins;
+background:#0b0b0b;
+color:white;
+text-align:center;
+
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 600px;
-    backdrop-filter: blur(10px);
+header{
+
+padding:40px;
+background:#111;
+
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.hero{
+
+padding:80px 20px;
+
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+.hero h2{
+
+font-size:42px;
+
 }
 
-.card {
-    background: rgba(255,255,255,0.2);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 15px;
+button{
+
+padding:14px 28px;
+border:none;
+border-radius:8px;
+background:#ff3b3b;
+color:white;
+cursor:pointer;
+margin-top:10px;
+font-size:16px;
+transition:0.3s;
+
 }
 
-button {
-    margin-top: 15px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: white;
-    color: #ff4d6d;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
+button:hover{
+
+transform:scale(1.05);
+
 }
 
-button:hover {
-    background-color: #ffe3ec;
-    transform: scale(1.05);
+.card{
+
+background:#151515;
+padding:30px;
+border-radius:12px;
+max-width:600px;
+margin:auto;
+
 }
 
-.foto {
-    width: 200px;
-    border-radius: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+.chat{
+
+padding:50px;
+
 }
 
-/* Corações */
-.hearts span {
-    position: fixed;
-    bottom: -10px;
-    font-size: 20px;
-    animation: subir 10s linear infinite;
+.chatbox{
+
+background:#151515;
+height:200px;
+overflow:auto;
+padding:20px;
+max-width:500px;
+margin:auto;
+border-radius:10px;
+text-align:left;
+
 }
 
-@keyframes subir {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
+input{
+
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:none;
+
 }
 
-/* Animação dos cards */
-.card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+.orcamento{
+
+padding:60px;
+
 }
 
-.card.mostrar {
-    opacity: 1;
-    transform: translateY(0);
+.stress{
+
+padding:50px;
+
+}
+
+.barra{
+
+width:80%;
+height:25px;
+background:#222;
+margin:auto;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+#stressBar{
+
+height:100%;
+width:0%;
+background:red;
+transition:1s;
+
+}
+
+.contador{
+
+padding:60px;
+
+}
+
+.contador h1{
+
+font-size:60px;
+
+}
+
+footer{
+
+padding:30px;
+color:#888;
+
 }
