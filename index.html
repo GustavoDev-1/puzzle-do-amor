@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Feliz 5 Meses ❤️</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cliente dos Sonhos</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<audio id="musica" src="minhanamorada.mp3" loop controls></audio>
-    <div class="hearts"></div>
+<header>
 
-    <div class="container">
-        <h1>Feliz 5 Meses, Meu Amor ❤️</h1>
+<h1>Cliente dos Sonhos</h1>
 
-        <img src="20251017_113930.jpg" class="foto">
+<p>Simulador de pedidos impossíveis para programadores</p>
 
-        <p>
-            Hoje completamos 5 meses de uma história que mudou completamente a minha vida.
-            5 meses de carinho, risadas, aprendizados, abraços apertados e momentos
-            que eu vou guardar para sempre no meu coração.
-        </p>
+</header>
 
-        <p>
-            Você se tornou meu lugar seguro, minha paz nos dias difíceis
-            e minha alegria nos dias bons.
-        </p>
+<section class="hero">
 
-        <button onclick="irParaMomentos()">Nossos Momentos 💕</button>
-        <button onclick="irParaCarta()">Minha Carta 💌</button>
-    </div>
+<h2>Construa qualquer coisa...</h2>
+
+<p>Desde que custe R$150 e fique pronto amanhã.</p>
+
+<button onclick="gerarPedido()">Gerar Pedido de Cliente</button>
+
+</section>
+
+<section class="pedido">
+
+<h2>Pedido Atual</h2>
+
+<div class="card">
+
+<p id="pedidoTexto">
+
+Clique no botão acima para gerar um cliente impossível.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="chat">
+
+<h2>Chat do Cliente</h2>
+
+<div class="chatbox" id="chatbox"></div>
+
+<input id="mensagem" placeholder="Responder cliente...">
+
+<button onclick="responder()">Enviar</button>
+
+</section>
+
+<section class="orcamento">
+
+<h2>Calculadora de Orçamento</h2>
+
+<button onclick="calcular()">Calcular valor real</button>
+
+<p id="valor"></p>
+
+</section>
+
+<section class="stress">
+
+<h2>Nível de Estresse do Programador</h2>
+
+<div class="barra">
+
+<div id="stressBar"></div>
+
+</div>
+
+</section>
+
+<section class="contador">
+
+<h2>Pedidos absurdos recebidos hoje</h2>
+
+<h1 id="contador">0</h1>
+
+</section>
+
+<footer>
+
+<p>Créditos: Desenvolvedor explorado 😂</p>
+
+</footer>
 
 <script src="script.js"></script>
+
 </body>
+
 </html>
